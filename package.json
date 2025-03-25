@@ -1,0 +1,26 @@
+{
+  "name": "vapi-integration-examples",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Example APIs for Vapi integration",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "start:app": "fastify start -l info src/index.js",
+    "dev:app": "fastify start -w -l info -P src/index.js"
+  },
+  "dependencies": {
+    "@fastify/autoload": "^6.0.0",
+    "@fastify/sensible": "^6.0.0",
+    "@ngrok/ngrok": "^1.4.1",
+    "dotenv": "^16.4.5",
+    "fastify": "^5.0.0",
+    "fastify-plugin": "^5.0.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "fastify-cli": "^7.3.0",
+    "pino-pretty": "^13.0.0"
+  }
+}
