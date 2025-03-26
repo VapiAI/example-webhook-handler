@@ -7,9 +7,10 @@ export default async function plugin(fastify, options) {
   }
 
   try {
-    const listener = await ngrok.connect({
+    const listener = await ngrok.forward({
       addr: process.env.PORT || 4000,
       authtoken: process.env.NGROK_AUTH_TOKEN,
+      domain: process.env.NGROK_DOMAIN,
     });
 
     const ngrokUrl = listener.url();

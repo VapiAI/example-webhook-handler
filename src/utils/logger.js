@@ -7,4 +7,12 @@ export const loggerConfig = {
       messageFormat: '{msg}',
     },
   },
+  serializers: {
+    res(reply) {
+      return {
+        statusCode: reply.statusCode,
+        body: reply.raw?.payload
+      };
+    }
+  }
 };
